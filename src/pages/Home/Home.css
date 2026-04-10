@@ -1,9 +1,133 @@
 .home__section {
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   padding: 64px 32px 48px;
+  position: relative;
+  overflow: hidden;
+}
+
+.home__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 50% 30%,
+      rgba(124, 92, 191, 0.18) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 20% 80%,
+      rgba(201, 168, 76, 0.07) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 40% 30% at 80% 80%,
+      rgba(201, 168, 76, 0.07) 0%,
+      transparent 60%
+    );
+  pointer-events: none;
 }
 
 .home__container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+}
+
+.home__badge {
+  color: var(--gold);
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 16px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-gold);
+}
+
+.home__title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.home__tagline {
+  margin-bottom: 20px;
+  color: var(--text-muted);
+}
+
+.home__info {
+  max-width: 460px;
+  margin-bottom: 36px;
+}
+
+.home__buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home__primary-btn {
+  background-color: var(--gold);
+  color: var(--void);
+  border: none;
+  cursor: pointer;
+  padding: 14px 36px;
+  transition: all 0.2s;
+  position: relative;
+  font-family: var(--heading);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.home__primary-btn::before,
+.home__primary-btn::after {
+  content: "◆";
+  font-size: 8px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--void);
+  opacity: 0.5;
+}
+
+.home__primary-btn::before {
+  left: 14px;
+}
+.home__primary-btn::after {
+  right: 14px;
+}
+
+.home__primary-btn:hover {
+  background-color: var(--gold-bright);
+  transform: translateY(-1px);
+}
+
+.home__secondary-btn {
+  background-color: transparent;
+  color: var(--gold);
+  border: 1px solid var(--border-gold);
+  cursor: pointer;
+  padding: 13px 32px;
+  transition: all 0.2s;
+  font-family: var(--heading);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.home__secondary-btn:hover {
+  background: rgba(201, 168, 76, 0.07);
+  border-color: var(--gold);
+}
+
+.home__rule {
+  width: 100%;
+  max-width: 380px;
+  margin-top: 48px;
 }
